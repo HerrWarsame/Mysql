@@ -1,0 +1,14 @@
+-- employee_demographics         employee_salary
+--       ↓                            ↓
+-- [Born after 1985]           [Salary > $50k]
+--        ↓                            ↓
+-- YoungEmployees              HighEarners
+--        \__________    __________/
+--                 \  /
+--             INNER JOIN (matching employee_id)
+--                   ↓
+--           EmployeeAnalysis
+--                   ↓
+--           GROUP BY gender, salary_grade
+--                   ↓
+--             Final Report
